@@ -13,6 +13,13 @@ h2, .h2 {
     font-weight: 700;
     line-height: normal;
 }
+.h2-accent {
+    font-size: var(--headline-2);
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 
 h3, .h3 {
     font-size: var(--headline-3);

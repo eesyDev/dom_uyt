@@ -1,0 +1,31 @@
+.header {
+    padding: 15px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-bone;
+    }
+    &__nav {
+        ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &.header--absolute {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9;
+    }
+}

@@ -1,0 +1,24 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    gap: map-get($spacings, 8);
+    padding: 17px 22px;
+    font-family: $font-family-base;
+    font-size: var(--body-3);
+    border-radius: .5rem;
+    border: 1px solid;
+    line-height: 100%;
+    font-weight: 700;
+    &.button--solid {
+        color: $color-light-black;
+        background-color: $color-bone;
+        border-color: $color-bone;
+    }
+    &.button--outlined {
+        color: $color-bone;
+        background-color: transparent;
+        border-color: $color-bone;
+    }
+}
