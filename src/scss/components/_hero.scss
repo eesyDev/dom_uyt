@@ -24,6 +24,7 @@
         background-color: rgba(0, 0, 0, .3);
         backdrop-filter: blur(10px);
         border-radius: .5rem;
+        margin-top: 112px;
         &-advantages {
             margin-top: 30px;
             display: flex;
@@ -34,6 +35,7 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            font-weight: 300;
         }
         &-btns {
             display: flex;
@@ -41,13 +43,13 @@
             margin-top: 30px;
         }
     }
-    >.container {
-        height: 100%;
-    }
-    &__wrppaer {
-        height: 100%;
-        align-items: center;
-        display: flex;
+    // >.container {
+    //     height: 100%;
+    // }
+    // &__wrapper {
+    //     height: 100%;
+    //     align-items: center;
+    //     display: flex;
 
-    }
+    // }
 }

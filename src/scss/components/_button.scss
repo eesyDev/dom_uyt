@@ -21,4 +21,9 @@
         background-color: transparent;
         border-color: $color-bone;
     }
+    &.button--solid-dark {
+        color: $color-text-inverse;
+        background-color: $color-dark-green;
+        border-color: $color-dark-green;
+    }
 }
