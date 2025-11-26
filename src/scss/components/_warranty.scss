@@ -1,10 +1,12 @@
 .warranty {
     margin-top: 80px;
+
     &__wrapper {
         background-color: #F7F7F7;
         position: relative;
         border-radius: 8px;
         padding: 30px 50px;
+
         &::before {
             content: '';
             width: 8px;
@@ -15,27 +17,38 @@
             top: 0;
             background-color: #000;
         }
-        
+
     }
+
     &__inner {
         display: flex;
         margin-top: 40px;
         justify-content: space-between;
     }
+
     &__specs {
         display: flex;
         flex-direction: column;
         gap: 20px;
         font-weight: 300;
+
         li {
             display: flex;
             align-items: center;
             gap: 15px;
         }
     }
+
     &__btns {
         display: flex;
         align-items: center;
         gap: 25px;
+
+        a {
+            min-width: 240px;
+            font-size: 12px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 }
