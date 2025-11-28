@@ -1,0 +1,88 @@
+.estimate {
+    margin-top: 100px;
+
+    &__wrapper {
+        position: relative;
+        background-color: #1D1D1F; // Dark background
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 69px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 396px;
+        background-image: url('/assets/img/bg.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: #fff;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 40px;
+        color: #ccc;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        &-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            width: 310px;
+        }
+    }
+
+    &__label {
+        font-size: 12px;
+        color: #ccc;
+        margin-left: 10px;
+    }
+
+    &__input {
+        background-color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 15px 20px;
+        width: 100%;
+        color: #000;
+
+        &::placeholder {
+            color: #999;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px $color-gold;
+        }
+    }
+
+    &__button {
+        font-weight: 700;
+        min-width: 240px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        height: 50px; // Match input height roughly
+
+    }
+}

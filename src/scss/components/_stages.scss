@@ -3,14 +3,22 @@
         display: flex;
         gap: 185px;
     }
+
     &__wrapper-top {
         justify-content: space-between;
     }
+
     &__wrapper-bottom {
         justify-content: center;
     }
+
+    &__line {
+        margin: 54px 0;
+    }
+
     &__card {
         max-width: 310px;
+
         &-heading {
             background-color: #BDC4C0;
             display: flex;
@@ -20,6 +28,7 @@
             padding: 10px 15px;
             font-size: 14px;
         }
+
         .num {
             background-color: $color-bone;
             color: $color-gold;
@@ -32,10 +41,12 @@
             align-items: center;
             justify-content: center;
         }
+
         .icon {
             width: 17px;
             height: 17px;
         }
+
         &-info {
             padding: 20px 15px;
             display: flex;
