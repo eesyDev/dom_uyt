@@ -7,6 +7,7 @@
         align-items: center;
         color: $color-bone;
     }
+
     &__nav {
         ul {
             display: flex;
@@ -15,11 +16,13 @@
             justify-content: center;
         }
     }
+
     &__actions {
         display: flex;
         align-items: center;
         gap: 20px;
     }
+
     &.header--absolute {
         position: absolute;
         left: 0;
@@ -27,5 +30,62 @@
         right: 0;
         width: 100%;
         z-index: 9;
+    }
+
+    &__social {
+        display: flex;
+        gap: 10px;
+    }
+
+    // Responsive
+    @media (max-width: $bp-lg) {
+        &__nav {
+            ul {
+                gap: 20px;
+                font-size: 14px;
+            }
+        }
+
+        &__actions {
+            gap: 15px;
+        }
+    }
+
+    @media (max-width: $bp-md) {
+        &__nav {
+            display: none; // Hide navigation on tablet/mobile
+            // TODO: Add mobile menu/hamburger
+        }
+
+        &__actions {
+            gap: 10px;
+
+            .button {
+                padding: 12px 18px;
+                font-size: 12px;
+            }
+        }
+
+        &__phone {
+            display: none; // Hide phone number on smaller screens
+        }
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 10px 0;
+
+        .logo {
+            max-width: 120px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__actions {
+            .button {
+                display: none; // Hide button on mobile, show only social icons
+            }
+        }
     }
 }
