@@ -53,8 +53,7 @@
 
     @media (max-width: $bp-md) {
         &__nav {
-            display: none; // Hide navigation on tablet/mobile
-            // TODO: Add mobile menu/hamburger
+            display: none;
         }
 
         &__actions {
@@ -67,7 +66,7 @@
         }
 
         &__phone {
-            display: none; // Hide phone number on smaller screens
+            display: none;
         }
     }
 
@@ -84,8 +83,148 @@
 
         &__actions {
             .button {
-                display: none; // Hide button on mobile, show only social icons
+                display: none;
             }
         }
+    }
+}
+
+// Burger Button
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    position: relative;
+
+    span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $color-bone;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    &.active {
+        span:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        span:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+
+    @media (max-width: $bp-md) {
+        display: flex;
+    }
+}
+
+// Mobile Menu
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 1000;
+    transition: right 0.4s ease;
+    overflow-y: auto;
+
+    &.active {
+        right: 0;
+    }
+
+    &__content {
+        padding: 80px 30px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        min-height: 100%;
+    }
+
+    &__nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            li {
+                a {
+                    font-size: 18px;
+                    color: $color-text-primary;
+                    transition: color 0.3s ease;
+                    display: block;
+                    padding: 5px 0;
+
+                    &:hover {
+                        color: $color-gold;
+                    }
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__phone {
+        font-size: 20px;
+        font-weight: 600;
+        color: $color-bone;
+        text-decoration: none;
+    }
+
+    &__social {
+        display: flex;
+        gap: 15px;
+
+        a {
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+// Mobile Menu Overlay
+.mobile-menu__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
     }
 }

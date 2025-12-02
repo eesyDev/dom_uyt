@@ -4,326 +4,414 @@
 
 // === PX → REM ===
 @function rem($px) {
-    @return ($px / 16) * 1rem;
-  }
-  
-  $bp-xxl: 1600px;
-  $bp-xl: 1536px;
-  $bp-lg: 1280px;
-  $bp-md: 1024px;
-  $bp-sm: 768px;
-  $bp-xs: 640px;
-  $bp-mobile-lg: 414px;
-  $bp-mobile-md: 376px;
-  $bp-mobile-sm: 360px;
-  $bp-mobile-xs: 320px;
-  
-  $breakpoints: (
-    xxl: $bp-xxl,
-    xl: $bp-xl,
-    lg: $bp-lg,
-    md: $bp-md,
-    sm: $bp-sm,
-    xs: $bp-xs,
-    2xs: $bp-mobile-lg,
-    3xs: $bp-mobile-md,
-    4xs: $bp-mobile-xs
-  );
+  @return ($px / 16) * 1rem;
+}
 
-  $spacings: (
-    xs: 0.25rem,
-    s: 0.5rem,
-    sm: 0.625rem,
-    md: 0.75rem,
-    base: 1rem,
-    lg: 1.25rem,
-    xl: 1.5rem,
-    2xl: 2rem,
-    3xl: 2.5rem,
-    4xl: 3rem,
-    5xl: 3.5rem,
-    6xl: 4rem
-  );
-  
-  /*------------------------------------*\
+$bp-xxl: 1600px;
+$bp-xl: 1536px;
+$bp-lg: 1280px;
+$bp-md: 1024px;
+$bp-sm: 768px;
+$bp-xs: 640px;
+$bp-mobile-lg: 414px;
+$bp-mobile-md: 376px;
+$bp-mobile-sm: 360px;
+$bp-mobile-xs: 320px;
+
+$breakpoints: (
+  xxl: $bp-xxl,
+  xl: $bp-xl,
+  lg: $bp-lg,
+  md: $bp-md,
+  sm: $bp-sm,
+  xs: $bp-xs,
+  2xs: $bp-mobile-lg,
+  3xs: $bp-mobile-md,
+  4xs: $bp-mobile-xs
+);
+
+$spacings: (
+  xs: 0.25rem,
+  s: 0.5rem,
+  sm: 0.625rem,
+  md: 0.75rem,
+  base: 1rem,
+  lg: 1.25rem,
+  xl: 1.5rem,
+  2xl: 2rem,
+  3xl: 2.5rem,
+  4xl: 3rem,
+  5xl: 3.5rem,
+  6xl: 4rem
+);
+
+/*------------------------------------*\
     #TYPOGRAPHY
   \*------------------------------------*/
-  
-  $font-family-base: 'Geologica', sans-serif;
-  $font-family-secondary: "Cormorant", serif;
-  
-  $headline-1-desktop: 3rem;
-  $headline-2-desktop: 2.5rem;
-  $headline-3-desktop: 2.375rem;
-  $headline-4-desktop: 2rem;
-  $subtitle-desktop: 1.5rem;
-  $paragraph-1-desktop: 1.375rem;
-  $paragraph-2-desktop: 1.25rem;
-  $body-1-desktop: 1rem;
-  $body-2-desktop: 0.875rem;
-  $body-3-desktop: 0.75rem;
-  
-  $headline-1-mobile: 2rem;
-  $headline-2-mobile: 1.5rem;
-  $headline-3-mobile: 1.375rem;
-  $headline-4-mobile: 2rem;
-  $subtitle-mobile: 1.25rem;
-  $paragraph-1-mobile: 1.125rem;
-  $paragraph-2-mobile: 1.125rem;
-  $body-1-mobile: 1rem;
-  $body-2-mobile: 0.875rem;
-  $body-3-mobile: 0.75rem;
-  
+
+$font-family-base: 'Geologica', sans-serif;
+$font-family-secondary: "Cormorant", serif;
+
+$headline-1-desktop: 3rem;
+$headline-2-desktop: 2.5rem;
+$headline-3-desktop: 2.375rem;
+$headline-4-desktop: 2rem;
+$subtitle-desktop: 1.5rem;
+$paragraph-1-desktop: 1.375rem;
+$paragraph-2-desktop: 1.25rem;
+$body-1-desktop: 1rem;
+$body-2-desktop: 0.875rem;
+$body-3-desktop: 0.75rem;
+
+$headline-1-mobile: 2rem;
+$headline-2-mobile: 1.5rem;
+$headline-3-mobile: 1.375rem;
+$headline-4-mobile: 2rem;
+$subtitle-mobile: 1.25rem;
+$paragraph-1-mobile: 1.125rem;
+$paragraph-2-mobile: 1.125rem;
+$body-1-mobile: 1rem;
+$body-2-mobile: 0.875rem;
+$body-3-mobile: 0.75rem;
+
+:root {
+  --headline-1: #{$headline-1-desktop};
+  --headline-2: #{$headline-2-desktop};
+  --headline-3: #{$headline-3-desktop};
+  --headline-4: #{$headline-4-desktop};
+  --subtitle: #{$subtitle-desktop};
+  --paragraph-1: #{$paragraph-1-desktop};
+  --paragraph-2: #{$paragraph-2-desktop};
+  --body-1: #{$body-1-desktop};
+  --body-2: #{$body-2-desktop};
+  --body-3: #{$body-3-desktop};
+}
+
+@media (max-width: $bp-sm) {
   :root {
-    --headline-1: #{$headline-1-desktop};
-    --headline-2: #{$headline-2-desktop};
-    --headline-3: #{$headline-3-desktop};
-    --headline-4: #{$headline-4-desktop};
-    --subtitle: #{$subtitle-desktop};
-    --paragraph-1: #{$paragraph-1-desktop};
-    --paragraph-2: #{$paragraph-2-desktop};
-    --body-1: #{$body-1-desktop};
-    --body-2: #{$body-2-desktop};
-    --body-3: #{$body-3-desktop};
+    --headline-1: #{$headline-1-mobile};
+    --headline-2: #{$headline-2-mobile};
+    --headline-3: #{$headline-3-mobile};
+    --headline-4: #{$headline-4-mobile};
+    --subtitle: #{$subtitle-mobile};
+    --paragraph-1: #{$paragraph-1-mobile};
+    --paragraph-2: #{$paragraph-2-mobile};
+    --body-1: #{$body-1-mobile};
+    --body-2: #{$body-2-mobile};
+    --body-3: #{$body-3-mobile};
   }
-  
-  @media (max-width: $bp-sm) {
-    :root {
-      --headline-1: #{$headline-1-mobile};
-      --headline-2: #{$headline-2-mobile};
-      --headline-3: #{$headline-3-mobile};
-      --headline-4: #{$headline-4-mobile};
-      --subtitle: #{$subtitle-mobile};
-      --paragraph-1: #{$paragraph-1-mobile};
-      --paragraph-2: #{$paragraph-2-mobile};
-      --body-1: #{$body-1-mobile};
-      --body-2: #{$body-2-mobile};
-      --body-3: #{$body-3-mobile};
-    }
-  }
-  
-  
-  /*------------------------------------*\
+}
+
+
+/*------------------------------------*\
     #COLOR VARIABLES
     BG, TEXT, BUTTONS, GRADIENTS etc
   \*------------------------------------*/
-  
-  
-  // === Background ===
-  $color-bg-primary: #f5f5f5;
-  $color-bg-secondary: #ffffff;
-  $color-bg-accent-green: #20842d;
-  $color-bone: #F0E8DD;
-  $color-gold: #BF9861;
-  $color-dark-green: #29390C;
-  $color-light-black: #242424;
-  
-  // === Text ===
-  $color-text-primary: #121212;
-  $color-text-high-emphasis: #1d1d1f;
-  $color-text-secondary: #575757;
-  $color-text-tertiary: #bcbcbc;
-  $color-text-accent-blue: #1b75d0;
-  $color-text-accent-green: #20842d;
-  $color-text-accent-red: #e2001a;
-  $color-text-accent-yellow: #fcaf26;
-  $color-text-inverse: #ffffff;
-  
-  // === Border ===
-  $color-border-primary: #bcbcbc;
-  $color-border-secondary: #121212;
-  $color-border-tertiary: #575757;
-  $color-border-tertiary-light: #d9d9d9;
-  $color-border-accent-blue: #1b75d0;
-  $color-border-accent-red: #e2001a;
-  $color-border-accent-green: #20842d;
-  $color-border-accent-yellow: #fcaf26;
-  
-  // === Buttons ===
-  $color-btn-primary: #20842d;
-  $color-btn-primary-hover: #22902f;
-  $color-btn-primary-pressed: #1b7227;
-  $color-btn-disabled: #8fc196;
-  
-  $color-btn-blue: #0077ED;
-  $color-btn-blue-pressed: #1768BA;
-  $color-btn-blue-disabled: #7AB3EC;
-  
-  $color-btn-red: #e2001a;
-  $color-btn-red-hover: #D20018;
-  $color-btn-red-pressed: #D20018;
-  
-  $color-btn-black: #121212;
-  
-  $color-btn-text-white: #ffffff;
-  $color-btn-bg-grey: #f5f5f5;
-  
-  // === Gradients ===
-  $color-gradient-green-light: #dcf8d6;
-  $color-gradient-green-medium: #8fc196;
-  $color-gradient-green-dark: #15571e;
-  $color-gradient-green-extra-dark: #0f4116;
-  $color-gradient-green-secondary: #22902f;
-  $color-gradient-green-primary: #20842d;
-  $color-gradient-green-secondary-dark: #1b7227;
-  
-  // === Links ===
-  $color-link-primary: #1b75d0;
-  $color-link-hover: #0077ed;
-  $color-link-pressed: #1768ba;
-  $color-link-inactive: #7ab3ec;
-  
-  /*------------------------------------*\
+
+
+// === Background ===
+$color-bg-primary: #f5f5f5;
+$color-bg-secondary: #ffffff;
+$color-bg-accent-green: #20842d;
+$color-bone: #F0E8DD;
+$color-gold: #BF9861;
+$color-dark-green: #29390C;
+$color-light-black: #242424;
+
+// === Text ===
+$color-text-primary: #121212;
+$color-text-high-emphasis: #1d1d1f;
+$color-text-secondary: #575757;
+$color-text-tertiary: #bcbcbc;
+$color-text-accent-blue: #1b75d0;
+$color-text-accent-green: #20842d;
+$color-text-accent-red: #e2001a;
+$color-text-accent-yellow: #fcaf26;
+$color-text-inverse: #ffffff;
+
+// === Border ===
+$color-border-primary: #bcbcbc;
+$color-border-secondary: #121212;
+$color-border-tertiary: #575757;
+$color-border-tertiary-light: #d9d9d9;
+$color-border-accent-blue: #1b75d0;
+$color-border-accent-red: #e2001a;
+$color-border-accent-green: #20842d;
+$color-border-accent-yellow: #fcaf26;
+
+// === Buttons ===
+$color-btn-primary: #20842d;
+$color-btn-primary-hover: #22902f;
+$color-btn-primary-pressed: #1b7227;
+$color-btn-disabled: #8fc196;
+
+$color-btn-blue: #0077ED;
+$color-btn-blue-pressed: #1768BA;
+$color-btn-blue-disabled: #7AB3EC;
+
+$color-btn-red: #e2001a;
+$color-btn-red-hover: #D20018;
+$color-btn-red-pressed: #D20018;
+
+$color-btn-black: #121212;
+
+$color-btn-text-white: #ffffff;
+$color-btn-bg-grey: #f5f5f5;
+
+// === Gradients ===
+$color-gradient-green-light: #dcf8d6;
+$color-gradient-green-medium: #8fc196;
+$color-gradient-green-dark: #15571e;
+$color-gradient-green-extra-dark: #0f4116;
+$color-gradient-green-secondary: #22902f;
+$color-gradient-green-primary: #20842d;
+$color-gradient-green-secondary-dark: #1b7227;
+
+// === Links ===
+$color-link-primary: #1b75d0;
+$color-link-hover: #0077ed;
+$color-link-pressed: #1768ba;
+$color-link-inactive: #7ab3ec;
+
+/*------------------------------------*\
     #BORDER RADIUS
   \*------------------------------------*/
-  $border-radius-base: .1875rem;
-  
-  
-  /*------------------------------------*\
+$border-radius-base: .1875rem;
+
+
+/*------------------------------------*\
     #CONTAINER
   \*------------------------------------*/
-  
-  // container widths
-  $container-widths: (
-    xxl: 1300px,
-    lg: rem(1192),
-    md: rem(936),
-    sm: rem(608),
-    xs: 100%,
-    mobile-lg: rem(382),
-    mobile-md: rem(312),
-    mobile-sm: rem(272)
-  );
-  
-  .container {
-    width: 100%;
-    margin-inline: auto;
-    // padding-inline: 1rem;
-  
-    // base (desktop)
-    max-width: map-get($container-widths, xxl);
-  
-    // adaptive
-    @media (max-width: $bp-lg)        { max-width: map-get($container-widths, lg); }
-    @media (max-width: $bp-md)        { max-width: map-get($container-widths, md); }
-    @media (max-width: $bp-sm)        { max-width: map-get($container-widths, sm); }
-    @media (max-width: $bp-xs)        { max-width: map-get($container-widths, xs); }
-    @media (max-width: $bp-mobile-lg) { max-width: map-get($container-widths, mobile-lg); }
-    @media (max-width: $bp-mobile-md) { max-width: map-get($container-widths, mobile-md); }
-    @media (max-width: $bp-mobile-sm) { max-width: map-get($container-widths, mobile-sm); }
+
+// container widths
+$container-widths: (
+  xxl: 1300px,
+  lg: rem(1192),
+  md: rem(936),
+  sm: rem(608),
+  xs: 100%,
+  mobile-lg: rem(382),
+  mobile-md: rem(312),
+  mobile-sm: rem(272)
+);
+$bp-xxl: 1600px;
+$bp-xl: 1536px;
+$bp-lg: 1280px;
+$bp-md: 1024px;
+$bp-sm: 768px;
+$bp-xs: 640px;
+$bp-mobile-lg: 414px;
+$bp-mobile-md: 376px;
+$bp-mobile-sm: 360px;
+$bp-mobile-xs: 320px;
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  // padding-inline: 1rem;
+
+  // base (desktop)
+  max-width: 1560px;
+  padding: 0 130px;
+
+  // adaptive
+  @media (max-width: 1279.99px) {
+    max-width: 100%;
+    padding: 0 80px;
   }
-  
-  /*------------------------------------*\
+
+  @media (max-width: 1023.99px) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: 767.99px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 639.99px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 413.99px) {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  @media (max-width: 375.99px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 360.99px) {
+    max-width: 100%;
+  }
+}
+
+/*------------------------------------*\
     #GRID COLUMNS
   \*------------------------------------*/
-  
-  $row-columns: 12;
-  
-  .row {
-    display: grid;
-    grid-template-columns: repeat($row-columns, minmax(0, 1fr));
+
+$row-columns: 12;
+
+.row {
+  display: grid;
+  grid-template-columns: repeat($row-columns, minmax(0, 1fr));
+}
+
+/* span generator: .col-1 … .col-12 */
+@for $i from 1 through $row-columns {
+  .col-#{$i} {
+    grid-column-end: span #{$i};
   }
-  
-  /* span generator: .col-1 … .col-12 */
-  @for $i from 1 through $row-columns {
-    .col-#{$i} {
-      grid-column-end: span #{$i};
-    }
-  }
-  
-  /* Generate responsive column spans (max-width) */
-  @each $name, $width in $breakpoints {
-    @media (max-width: #{$width}) {
-      @for $i from 1 through $row-columns {
-        .col-#{$name}-#{$i} {
-          grid-column: span #{$i};
-        }
+}
+
+/* Generate responsive column spans (max-width) */
+@each $name, $width in $breakpoints {
+  @media (max-width: #{$width}) {
+    @for $i from 1 through $row-columns {
+      .col-#{$name}-#{$i} {
+        grid-column: span #{$i};
       }
     }
   }
-  
-  
-  /*------------------------------------*\
+}
+
+
+/*------------------------------------*\
     #GUTTER / GAP UTILS
   \*------------------------------------*/
-  
-  @each $key, $value in $spacings {
-    .gap-#{$key} {
-      gap: #{$value};
-    }
+
+@each $key, $value in $spacings {
+  .gap-#{$key} {
+    gap: #{$value};
   }
-  
-  @each $name,
-  $width in $breakpoints {
-    @media (max-width: #{$width}) {
-      @each $key, $value in $spacings {
-        .gap-#{$name}-#{$key} {
-          gap: #{$value};
-        }
+}
+
+@each $name,
+$width in $breakpoints {
+  @media (max-width: #{$width}) {
+    @each $key, $value in $spacings {
+      .gap-#{$name}-#{$key} {
+        gap: #{$value};
       }
     }
   }
+}
 
 
-  /*------------------------------------*\
+/*------------------------------------*\
     #OFFSET COLUMNS
   \*------------------------------------*/
 
-  @for $i from 1 through $row-columns {
-    .offset-#{$i} {
-      grid-column-start: #{$i + 1};
-    }
+@for $i from 1 through $row-columns {
+  .offset-#{$i} {
+    grid-column-start: #{$i + 1};
   }
+}
 
-  /* Responsive offsets */
-  @each $name, $width in $breakpoints {
-    @media (max-width: #{$width}) {
-      @for $i from 1 through $row-columns {
-        .offset-#{$name}-#{$i} {
-          grid-column-start: #{$i + 1};
-        }
+/* Responsive offsets */
+@each $name, $width in $breakpoints {
+  @media (max-width: #{$width}) {
+    @for $i from 1 through $row-columns {
+      .offset-#{$name}-#{$i} {
+        grid-column-start: #{$i + 1};
       }
     }
   }
-    
-  
-  /*------------------------------------*\
+}
+
+
+/*------------------------------------*\
     #PADDINGS/MARGINS
   \*------------------------------------*/
-  
-  //p-value ex pt-8 output padding-top: 8;
-  @each $key, $value in $spacings {
-    .p-#{$key}  { padding: $value; }
-    .pt-#{$key} { padding-top: $value; }
-    .pb-#{$key} { padding-bottom: $value; }
-    .pl-#{$key} { padding-left: $value; }
-    .pr-#{$key} { padding-right: $value; }
+
+//p-value ex pt-8 output padding-top: 8;
+@each $key, $value in $spacings {
+  .p-#{$key} {
+    padding: $value;
   }
-  
-  @each $key, $value in $spacings {
-    .m-#{$key}  { margin: $value; }
-    .mt-#{$key} { margin-top: $value; }
-    .mb-#{$key} { margin-bottom: $value; }
-    .ml-#{$key} { margin-left: $value; }
-    .mr-#{$key} { margin-right: $value; }
+
+  .pt-#{$key} {
+    padding-top: $value;
   }
-  
-  // === Responsive spacings ===
-  @each $name, $width in $breakpoints {
-    @media (max-width: #{$width}) {
-      @each $key, $value in $spacings {
-        .p-#{$name}-#{$key}  { padding: $value; }
-        .pt-#{$name}-#{$key} { padding-top: $value; }
-        .pb-#{$name}-#{$key} { padding-bottom: $value; }
-        .pl-#{$name}-#{$key} { padding-left: $value; }
-        .pr-#{$name}-#{$key} { padding-right: $value; }
-  
-        .m-#{$name}-#{$key}  { margin: $value; }
-        .mt-#{$name}-#{$key} { margin-top: $value; }
-        .mb-#{$name}-#{$key} { margin-bottom: $value; }
-        .ml-#{$name}-#{$key} { margin-left: $value; }
-        .mr-#{$name}-#{$key} { margin-right: $value; }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+}
+
+@each $key, $value in $spacings {
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+}
+
+// === Responsive spacings ===
+@each $name, $width in $breakpoints {
+  @media (max-width: #{$width}) {
+    @each $key, $value in $spacings {
+      .p-#{$name}-#{$key} {
+        padding: $value;
+      }
+
+      .pt-#{$name}-#{$key} {
+        padding-top: $value;
+      }
+
+      .pb-#{$name}-#{$key} {
+        padding-bottom: $value;
+      }
+
+      .pl-#{$name}-#{$key} {
+        padding-left: $value;
+      }
+
+      .pr-#{$name}-#{$key} {
+        padding-right: $value;
+      }
+
+      .m-#{$name}-#{$key} {
+        margin: $value;
+      }
+
+      .mt-#{$name}-#{$key} {
+        margin-top: $value;
+      }
+
+      .mb-#{$name}-#{$key} {
+        margin-bottom: $value;
+      }
+
+      .ml-#{$name}-#{$key} {
+        margin-left: $value;
+      }
+
+      .mr-#{$name}-#{$key} {
+        margin-right: $value;
       }
     }
   }
-
+}

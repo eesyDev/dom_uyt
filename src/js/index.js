@@ -1,4 +1,39 @@
 jQuery(document).ready(function ($) {
+    // ===== MOBILE MENU =====
+    const burger = document.querySelector('.burger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu__overlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu__nav a');
+
+    function toggleMobileMenu() {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    }
+
+    function closeMobileMenu() {
+        burger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+
+    if (burger) {
+        burger.addEventListener('click', toggleMobileMenu);
+    }
+
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    if (mobileMenuLinks) {
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    }
+
+
     const promoSliders = document.querySelectorAll('.portfolio__card-slider');
     try {
         promoSliders && promoSliders.forEach((slider, index) => {

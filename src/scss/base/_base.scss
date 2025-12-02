@@ -21,6 +21,10 @@ body {
   font-size: 16px;
   color: $color-light-black;
   font-weight: 300;
+
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 /*------------------------------------*\
