@@ -1,22 +1,54 @@
 .repair-type {
     margin-top: 100px;
+
+    @media (max-width: $bp-md) {
+        margin-top: 80px;
+    }
+
+    @media (max-width: $bp-sm) {
+        margin-top: 60px;
+    }
+
     &__wrapper {
         gap: 20px;
         margin-top: 50px;
+
+        @media (max-width: $bp-sm) {
+            gap: 15px;
+            margin-top: 30px;
+        }
     }
+
     &__card {
         height: 427px;
         border-radius: .5rem;
         position: relative;
+
+        @media (max-width: $bp-md) {
+            height: 350px;
+        }
+
+        @media (max-width: $bp-sm) {
+            height: 320px;
+            grid-column: span 12 !important; // Одна карточка на всю ширину
+        }
+
+        @media (max-width: $bp-xs) {
+            height: 280px;
+        }
+
         &-img {
             width: 100%;
             height: 100%;
+
             img {
                 width: 100%;
                 height: 100%;
                 border-radius: .5rem;
+                object-fit: cover;
             }
         }
+
         &-info {
             position: absolute;
             right: 20px;
@@ -26,12 +58,36 @@
             color: $color-text-inverse;
             padding: 20px;
             border-radius: .5rem;
+
+            @media (max-width: $bp-sm) {
+                right: 15px;
+                bottom: 15px;
+                padding: 15px;
+                left: 15px; // На мобильных растягиваем на всю ширину
+            }
+
+            @media (max-width: $bp-xs) {
+                padding: 12px;
+            }
         }
+
         &-btns {
             margin-top: 20px;
             display: flex;
             gap: 20px;
             align-items: center;
+
+            @media (max-width: $bp-sm) {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+                margin-top: 15px;
+            }
+
+            @media (max-width: $bp-xs) {
+                gap: 10px;
+                margin-top: 12px;
+            }
         }
     }
 }

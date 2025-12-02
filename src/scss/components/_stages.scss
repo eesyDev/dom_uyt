@@ -1,25 +1,89 @@
 .stages {
     margin-top: 80px;
 
+    @media (max-width: $bp-md) {
+        margin-top: 60px;
+    }
+
+    @media (max-width: $bp-sm) {
+        margin-top: 50px;
+    }
+
+    &__outer {
+        @media (max-width: $bp-sm) {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
     &__wrapper {
         display: flex;
         gap: 185px;
+
+        @media (max-width: $bp-lg) {
+            gap: 100px;
+        }
+
+        @media (max-width: $bp-md) {
+            gap: 50px;
+        }
+
+        @media (max-width: $bp-sm) {
+            flex-direction: column;
+            gap: 15px;
+        }
     }
 
     &__wrapper-top {
         justify-content: space-between;
+
+        @media (max-width: $bp-sm) {
+            justify-content: flex-start;
+        }
     }
 
     &__wrapper-bottom {
         justify-content: center;
+
+        @media (max-width: $bp-sm) {
+            justify-content: flex-start;
+        }
     }
 
     &__line {
         margin: 54px 0;
+
+        @media (max-width: $bp-md) {
+            margin: 40px 0;
+        }
+
+        @media (max-width: $bp-sm) {
+            display: none;
+        }
+
+        img {
+            @media (max-width: $bp-lg) {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 
     &__card {
         max-width: 310px;
+
+        @media (max-width: $bp-lg) {
+            max-width: 280px;
+        }
+
+        @media (max-width: $bp-md) {
+            max-width: 250px;
+        }
+
+        @media (max-width: $bp-sm) {
+            max-width: 100%;
+        }
 
         &-heading {
             background-color: #BDC4C0;
@@ -29,6 +93,11 @@
             border-radius: 10px;
             padding: 10px 15px;
             font-size: 14px;
+
+            @media (max-width: $bp-sm) {
+                padding: 12px 15px;
+                font-size: 15px;
+            }
         }
 
         .num {
@@ -42,11 +111,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media (max-width: $bp-sm) {
+                width: 28px;
+                height: 28px;
+                font-size: 20px;
+            }
         }
 
         .icon {
             width: 17px;
             height: 17px;
+
+            @media (max-width: $bp-sm) {
+                width: 18px;
+                height: 18px;
+            }
         }
 
         &-info {
@@ -56,6 +136,24 @@
             gap: 15px;
             font-size: 14px;
             font-weight: 300;
+
+            @media (max-width: $bp-sm) {
+                padding: 15px;
+                gap: 12px;
+            }
+        }
+    }
+
+    .button--solid-dark {
+        margin-top: 50px;
+
+        @media (max-width: $bp-md) {
+            margin-top: 40px;
+        }
+
+        @media (max-width: $bp-sm) {
+            margin-top: 30px;
+            width: 100%;
         }
     }
 }

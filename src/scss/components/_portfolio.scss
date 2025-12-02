@@ -2,23 +2,63 @@
     margin-top: 100px;
     margin-bottom: 100px;
 
+    @media (max-width: $bp-md) {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: $bp-sm) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
     &__wrapper {
         margin-top: 50px;
+
+        @media (max-width: $bp-sm) {
+            margin-top: 30px;
+        }
     }
 
     &__card {
         margin-bottom: 50px;
         align-items: flex-start;
         gap: 20px;
+
+        @media (max-width: $bp-md) {
+            margin-bottom: 40px;
+            gap: 15px;
+        }
+
+        @media (max-width: $bp-sm) {
+            flex-direction: column !important;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
         &.portfolio__card--right-oriented {
             flex-direction: row-reverse;
             display: flex;
-            > div {
+
+            >div {
                 width: 50%;
+
+                @media (max-width: $bp-sm) {
+                    width: 100% !important;
+                }
             }
+
             .portfolio__card-info {
                 padding-left: 0;
                 padding-right: 30px;
+
+                @media (max-width: $bp-md) {
+                    padding-right: 20px;
+                }
+
+                @media (max-width: $bp-sm) {
+                    padding-right: 0;
+                }
             }
         }
     }
@@ -29,6 +69,22 @@
         overflow: hidden;
         max-height: 407px;
 
+        @media (max-width: $bp-md) {
+            max-height: 350px;
+            border-radius: 16px;
+        }
+
+        @media (max-width: $bp-sm) {
+            max-height: 300px;
+            width: 100% !important;
+            grid-column: span 12 !important;
+        }
+
+        @media (max-width: $bp-xs) {
+            max-height: 250px;
+            border-radius: 12px;
+        }
+
         .swiper-slide {
             img {
                 width: 100%;
@@ -36,6 +92,14 @@
                 object-fit: cover;
                 border-radius: 20px;
                 display: block;
+
+                @media (max-width: $bp-md) {
+                    border-radius: 16px;
+                }
+
+                @media (max-width: $bp-xs) {
+                    border-radius: 12px;
+                }
             }
         }
 
@@ -49,6 +113,11 @@
             border-radius: 50%;
             backdrop-filter: blur(4px);
             transition: all 0.3s ease;
+
+            @media (max-width: $bp-sm) {
+                width: 25px;
+                height: 25px;
+            }
 
             &::after {
                 font-size: 14px;
@@ -64,12 +133,22 @@
         .swiper-pagination {
             bottom: 20px;
 
+            @media (max-width: $bp-sm) {
+                bottom: 15px;
+            }
+
             &-bullet {
                 background: #fff;
                 opacity: 0.5;
                 width: 8px;
                 height: 8px;
                 margin: 0 6px;
+
+                @media (max-width: $bp-xs) {
+                    width: 6px;
+                    height: 6px;
+                    margin: 0 4px;
+                }
 
                 &-active {
                     opacity: 1;
@@ -81,16 +160,34 @@
     &__card-title {
         font-weight: 400;
         margin-bottom: 24px;
+
+        @media (max-width: $bp-sm) {
+            margin-bottom: 16px;
+        }
     }
 
     &__card-options {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        @media (max-width: $bp-sm) {
+            gap: 12px;
+        }
     }
 
     &__card-info {
         padding-left: 30px;
+
+        @media (max-width: $bp-md) {
+            padding-left: 20px;
+        }
+
+        @media (max-width: $bp-sm) {
+            padding-left: 0;
+            width: 100% !important;
+            grid-column: span 12 !important;
+        }
     }
 
     &__card-option {
@@ -100,6 +197,11 @@
         width: fit-content;
         font-size: 0.875rem;
         font-weight: 300;
+
+        @media (max-width: $bp-sm) {
+            gap: 10px;
+            font-size: 0.8125rem;
+        }
 
         .tag {
             display: flex;
@@ -113,9 +215,20 @@
             gap: 8px;
             font-size: 0.75rem;
 
+            @media (max-width: $bp-sm) {
+                padding: 6px 7px;
+                font-size: 0.6875rem;
+                gap: 6px;
+            }
+
             img {
                 width: 16px;
                 height: 16px;
+
+                @media (max-width: $bp-sm) {
+                    width: 14px;
+                    height: 14px;
+                }
             }
         }
     }
@@ -130,8 +243,17 @@
         width: fit-content;
         font-weight: 300;
 
+        @media (max-width: $bp-sm) {
+            margin-bottom: 16px;
+            font-size: 0.8125rem;
+        }
+
         &-item {
             margin-bottom: 8px;
+
+            @media (max-width: $bp-sm) {
+                margin-bottom: 6px;
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -142,27 +264,43 @@
             }
         }
     }
+
     &__card-descr-wrapper {
         font-size: 0.875rem;
         margin-bottom: 12px;
         font-weight: 300;
         margin-top: 25px;
+
+        @media (max-width: $bp-sm) {
+            margin-top: 16px;
+            margin-bottom: 10px;
+            font-size: 0.8125rem;
+        }
     }
+
     &__card-descr {
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         position: relative;
     }
+
     &__card-descr--expanded {
         -webkit-line-clamp: unset;
+        line-clamp: unset;
         overflow: visible;
-      }
+    }
+
     &__card-descr-toggle {
         width: 100%;
         text-align: end;
         padding: 4px 30px 0;
+
+        @media (max-width: $bp-sm) {
+            padding: 4px 15px 0;
+        }
     }
 
     .btn-details {
@@ -174,16 +312,36 @@
         display: inline-block;
         transition: background 0.3s;
 
+        @media (max-width: $bp-sm) {
+            padding: 10px 24px;
+            width: 100%;
+            text-align: center;
+        }
+
         &:hover {
             background: darken(#BFA06A, 10%);
         }
     }
+
     .button--solid-dark {
         padding-left: 51px;
         padding-right: 51px;
+
+        @media (max-width: $bp-sm) {
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 100%;
+        }
     }
+
     .button--solid-gold {
         padding-left: 44px;
         padding-right: 44px;
+
+        @media (max-width: $bp-sm) {
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 100%;
+        }
     }
 }
