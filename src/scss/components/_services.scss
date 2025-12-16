@@ -1,0 +1,109 @@
+.services-heading {
+    margin-top: 50px;
+
+    @media (max-width: $bp-sm) {
+        margin-top: 30px;
+    }
+}
+
+.services__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 54px;
+
+    @media (max-width: $bp-sm) {
+        margin-top: 30px;
+        gap: 30px;
+    }
+}
+
+.service-card {
+    &.service-card--rtl {
+        .service-card__inner {
+            flex-direction: row-reverse;
+
+            @media (max-width: $bp-sm) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__image {
+        width: 50%;
+        height: 360px;
+
+        @media (max-width: $bp-sm) {
+            width: 100%;
+            height: 240px;
+        }
+
+        img {
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        font-family: $font-family-secondary;
+        font-weight: 700;
+
+        @media (max-width: $bp-sm) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    &__content {
+        width: calc(50% - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 360px;
+
+        @media (max-width: $bp-md) {
+            width: calc(50% - 20px);
+        }
+
+        @media (max-width: $bp-sm) {
+            width: 100%;
+            min-height: auto;
+            gap: 20px;
+        }
+
+        .button {
+            margin-top: 20px;
+            width: 180px;
+
+            @media (max-width: $bp-sm) {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        @media (max-width: $bp-md) {
+            gap: 20px;
+        }
+
+        @media (max-width: $bp-sm) {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+    }
+}
