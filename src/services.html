@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+//= utilities/head.html
+
+<body>
+    <header class="header header--dark">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">
+                    <img src="assets/img/logo.svg" alt="Ремонт квартир 
+                в Санкт-Петербурге под ключ">
+                </a>
+
+                <div class="header__nav body-sm">
+                    <nav class="nav ">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Портфолио</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="">Блог</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header__actions body-lg">
+                    <a href="" class="header__phone ">+7 (999) 999-99-99</a>
+                    <div class="header__social">
+                        <a href="">
+                            <img src="assets/img/tg.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="assets/img/wp.svg" alt="">
+                        </a>
+                    </div>
+                    <a href="#call" class="button button--solid open-popup">Рассчитать стоимость</a>
+                </div>
+
+                <!-- Burger Button -->
+                <button class="burger" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu__content">
+                <nav class="mobile-menu__nav">
+                    <ul>
+                        <li><a href="">Главная</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="">Отзывы</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu__contacts">
+                    <a href="tel:+79999999999" class="mobile-menu__phone">+7 (999) 999-99-99</a>
+                    <div class="mobile-menu__social">
+                        <a href="">
+                            <img src="assets/img/tg.svg" alt="Telegram">
+                        </a>
+                        <a href="">
+                            <img src="assets/img/wp.svg" alt="WhatsApp">
+                        </a>
+                    </div>
+                    <button class="button button--solid">Рассчитать стоимость</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="mobile-menu__overlay"></div>
+    </header>
+    <main>
+        <section class="services-heading">
+            <div class="container">
+                <h1 class="h1-accent accent-heading-before">Услуги</h1>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="services__inner">
+                    //= sections/services-card.html
+                    //= sections/services-card-rtl.html
+                </div>
+            </div>
+
+        </section>
+        //= sections/cycle.html
+    </main>
+    //= sections/footer.html
+    //= sections/dialogs.html
+
+    //= utilities/scripts.html
+</body>
+
+</html>

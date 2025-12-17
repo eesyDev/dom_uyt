@@ -44,6 +44,10 @@
         z-index: 9;
     }
 
+    &.header--dark {
+        background-color: $color-light-black;
+    }
+
     &__social {
         display: flex;
         gap: 10px;

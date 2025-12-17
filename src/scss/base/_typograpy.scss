@@ -1,4 +1,5 @@
-h1, .h1 {
+h1,
+.h1 {
     font-size: var(--headline-1);
     font-family: $font-family-base;
     font-style: normal;
@@ -6,7 +7,30 @@ h1, .h1 {
     line-height: normal;
 }
 
-h2, .h2 {
+.h1-accent {
+    font-size: 112px;
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+
+    &.accent-heading-before {
+        &:before {
+            content: '';
+            width: 550px;
+            height: 160px;
+            position: absolute;
+            left: -130px;
+            top: 0;
+            z-index: -1;
+            background-image: url('../img/green-pattern.svg');
+        }
+    }
+}
+
+h2,
+.h2 {
     font-size: var(--headline-2);
     font-family: $font-family-base;
     font-style: normal;
@@ -16,6 +40,7 @@ h2, .h2 {
         font-size: 24px;
     }
 }
+
 .h2-accent {
     font-size: var(--headline-2);
     font-family: $font-family-secondary;
@@ -23,10 +48,9 @@ h2, .h2 {
     font-weight: 700;
     line-height: normal;
     position: relative;
-    padding-top: 20px;
     &.accent-before {
         &:before {
-            content:'';
+            content: '';
             width: 350px;
             height: 150px;
             position: absolute;
@@ -38,7 +62,8 @@ h2, .h2 {
     }
 }
 
-h3, .h3 {
+h3,
+.h3 {
     font-size: var(--headline-3);
     font-family: $font-family-base;
     font-style: normal;
@@ -46,7 +71,8 @@ h3, .h3 {
     line-height: normal;
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: var(--headline-4);
     font-family: $font-family-base;
     font-style: normal;
@@ -132,29 +158,4 @@ h4, .h4 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-}
-
-@media screen and (max-width: $bp-lg) {
-    h1, .h1 {
-        font-size: 2.5rem;
-    }
-    h2, .h2 {
-        font-size: 2rem;
-    }
-}
-@media screen and (max-width: $bp-md) {
-    h1, .h1 {
-        font-size: 2.2rem;
-    }
-    h2, .h2 {
-        font-size: 1.8rem;
-    }
-}
-@media screen and (max-width: $bp-sm) {
-    h1, .h1 {
-        font-size: 1.8rem;
-    }
-    h2, .h2 {
-        font-size: 24px;
-    }
 }
