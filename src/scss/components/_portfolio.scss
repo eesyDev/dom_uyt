@@ -26,13 +26,14 @@
         gap: 20px;
 
         @media (max-width: $bp-md) {
-            margin-bottom: 40px;
+            flex-direction: column;
             gap: 15px;
+            &:last-child {
+                margin-bottom: 25px;
+            }
         }
 
         @media (max-width: $bp-sm) {
-            flex-direction: column !important;
-            margin-bottom: 30px;
             gap: 20px;
         }
 
@@ -40,10 +41,15 @@
             flex-direction: row-reverse;
             display: flex;
 
+            @media (max-width: $bp-md) {
+                // flex-direction: row-reverse;
+                display: grid;
+            }
+
             >div {
                 width: 50%;
 
-                @media (max-width: $bp-sm) {
+                @media (max-width: $bp-md) {
                     width: 100% !important;
                 }
             }
@@ -70,18 +76,14 @@
         max-height: 407px;
 
         @media (max-width: $bp-md) {
-            max-height: 350px;
+            max-height: 600px;
             border-radius: 16px;
-        }
-
-        @media (max-width: $bp-sm) {
-            max-height: 300px;
-            width: 100% !important;
-            grid-column: span 12 !important;
+            width: 100%;
+            grid-column: span 12;
         }
 
         @media (max-width: $bp-xs) {
-            max-height: 250px;
+            // max-height: 250px;
             border-radius: 12px;
         }
 
@@ -117,6 +119,10 @@
             @media (max-width: $bp-sm) {
                 width: 25px;
                 height: 25px;
+            }
+
+            @media (max-width: $bp-xs) {
+                display: none;
             }
 
             &::after {
@@ -183,7 +189,7 @@
             padding-left: 20px;
         }
 
-        @media (max-width: $bp-sm) {
+        @media (max-width: $bp-md) {
             padding-left: 0;
             width: 100% !important;
             grid-column: span 12 !important;
@@ -219,6 +225,9 @@
                 padding: 6px 7px;
                 font-size: 0.6875rem;
                 gap: 6px;
+            }
+            @media (max-width: $bp-mobile-sm) {
+                font-size: 0.6rem;
             }
 
             img {
@@ -267,13 +276,11 @@
 
     &__card-descr-wrapper {
         font-size: 0.875rem;
-        margin-bottom: 12px;
+        margin-bottom: 25px;
         font-weight: 300;
         margin-top: 25px;
 
         @media (max-width: $bp-sm) {
-            margin-top: 16px;
-            margin-bottom: 10px;
             font-size: 0.8125rem;
         }
     }
@@ -295,12 +302,10 @@
 
     &__card-descr-toggle {
         width: 100%;
-        text-align: end;
-        padding: 4px 30px 0;
-
-        @media (max-width: $bp-sm) {
-            padding: 4px 15px 0;
-        }
+        text-align: start;
+        padding: 5px 0 0;
+        color: $color-dark-green;
+        text-decoration: underline;
     }
 
     .btn-details {
@@ -327,7 +332,7 @@
         padding-left: 51px;
         padding-right: 51px;
 
-        @media (max-width: $bp-sm) {
+        @media (max-width: $bp-md) {
             padding-left: 30px;
             padding-right: 30px;
             width: 100%;
@@ -335,12 +340,8 @@
     }
 
     .button--solid-gold {
-        padding-left: 44px;
-        padding-right: 44px;
 
-        @media (max-width: $bp-sm) {
-            padding-left: 30px;
-            padding-right: 30px;
+        @media (max-width: $bp-md) {
             width: 100%;
         }
     }

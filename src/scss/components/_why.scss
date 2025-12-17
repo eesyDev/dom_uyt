@@ -7,14 +7,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 40px;
+        gap: 4%;
         position: relative;
         z-index: 1;
     }
 
     &__content {
-        flex: 0 0 50%;
-        max-width: 600px;
+        flex: 0 0 56%;
+        max-width: 720px;
     }
 
     &__title {
@@ -28,7 +28,7 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px 40px;
+        gap: 30px;
         margin-bottom: 30px;
         list-style: none;
         padding: 0;
@@ -36,8 +36,19 @@
 
     &__item {
         display: flex;
-        align-items: center;
-        gap: 15px;
+        flex-direction: column;
+        gap: 5px;
+        &-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 400;
+            min-height: 48px;
+        }
+        &-text {
+            font-size: 14px;
+            font-weight: 200;
+        }
     }
 
     &__icon {
@@ -49,8 +60,9 @@
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        padding: 4px;
-
+    }
+    &__text {
+        line-height: 1.1;
     }
 
     &__button {
@@ -58,7 +70,7 @@
     }
 
     &__media {
-        flex: 0 0 45%;
+        flex: 0 0 40%;
         position: relative;
     }
 
@@ -122,12 +134,14 @@
 
         &__container {
             flex-direction: column;
+            align-items: start;
             gap: 40px;
         }
 
         &__content {
             flex: 1;
             max-width: 100%;
+            width: 100%;
         }
 
         &__media {
@@ -137,11 +151,14 @@
 
         &__list {
             grid-template-columns: 1fr;
-            gap: 15px;
+            gap: 30px;
+            width: 60%;
         }
-
-        .button {
-            width: 100%;
+        &__item {
+            gap: 10px;
+            &-head {
+                min-height: auto;
+            }
         }
     }
 
@@ -159,6 +176,7 @@
 
         &__list {
             margin-bottom: 20px;
+            width: 100%;
         }
 
         &__item {
@@ -166,14 +184,12 @@
             font-size: 14px;
         }
 
-        &__icon {
-            width: 24px;
-            height: 24px;
-        }
-
         &__image-wrapper {
             border-width: 5px;
             border-radius: 12px;
+        }
+        .button {
+            width: 100%;
         }
     }
 }

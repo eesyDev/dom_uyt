@@ -60,12 +60,19 @@
         gap: 0.5rem;
 
         @media (max-width: $bp-md) {
-            margin-top: 1.5rem;
+            display: none;
         }
 
         @media (max-width: $bp-sm) {
             margin-top: 1rem;
             width: 100%;
+        }
+        &-mob {
+            display: none;
+            @media (max-width: $bp-md) {
+                display: flex;
+                align-items: center;
+            }
         }
     }
 
@@ -96,7 +103,6 @@
     &__item {
         overflow: hidden;
         transition: background-color 0.3s ease;
-
         &.active {
 
             // Darker grey/greenish from image
@@ -122,6 +128,9 @@
         transition: color 0.3s ease;
         background-color: #F7F7F7;
         border-radius: $border-radius-base;
+        &:hover {
+            background: darken(#f7f7f7, 5%);
+        }
 
         @media (max-width: $bp-sm) {
             padding: 0.875rem 1rem;
@@ -165,8 +174,11 @@
             color: $color-text-secondary;
 
             @media (max-width: $bp-sm) {
-                padding: 0 1rem 1rem 1rem;
+                padding: 10px 20px;
                 font-size: 0.9375rem;
+            }
+            @media (max-width: $bp-xs) {
+                padding: 10px;
             }
 
             p {

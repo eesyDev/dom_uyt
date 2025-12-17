@@ -4,13 +4,32 @@
     justify-content: center;
     line-height: normal;
     gap: map-get($spacings, 8);
-    padding: 17px 22px;
+    padding: 17px 17px;
+    height: 50px;
     font-family: $font-family-base;
     font-size: var(--body-3);
     border-radius: .5rem;
     border: 1px solid;
     line-height: 100%;
     font-weight: 700;
+    @media (max-width: $bp-xs) {
+        height: 45px;
+    }
+    &-wide {
+        width: 240px;
+    }
+    &-lg {
+        width: 240px;
+    }
+    &-lg {
+        width: 200px;
+    }
+    &-md {
+        width: 180px;
+    }
+    &-sm {
+        width: 160px;
+    }
 
     &.button--solid {
         color: $color-light-black;
@@ -26,6 +45,10 @@
         color: $color-bone;
         background-color: transparent;
         border-color: $color-bone;
+        &:hover {
+            background-color: $color-bone;
+            color: $color-light-black;
+        }
     }
 
     &.button--solid-dark {
@@ -45,6 +68,7 @@
 
         &:hover {
             background-color: darken($color-gold, 10%);
+            border-color: darken($color-gold, 10%);
         }
     }
 
@@ -55,6 +79,7 @@
         gap: 4px;
         position: relative;
         padding: 3px 0;
+        height: auto;
 
         &::before {
             content: '';
@@ -64,6 +89,15 @@
             position: absolute;
             bottom: 0;
             left: 0;
+        }
+        &:hover {
+            color: $color-gold;
+            &::before {
+                background-color: $color-gold;
+            }
+            svg path {
+                fill: $color-gold;
+            }
         }
     }
 }

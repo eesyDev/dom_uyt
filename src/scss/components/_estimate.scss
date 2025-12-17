@@ -15,6 +15,9 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        @media (max-width: $bp-xs) {
+            padding: 30px 20px;
+        }
     }
 
     &__content {
@@ -43,13 +46,18 @@
         align-items: flex-end;
         gap: 30px;
         flex-wrap: wrap;
-
+        @media (max-width: $bp-md) {
+            gap: 20px;
+        }
         &-group {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 8px;
             width: 310px;
+            @media (max-width: $bp-md) {
+                width: 100%;
+            }
         }
     }
 
@@ -83,6 +91,11 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
         height: 50px; // Match input height roughly
-
+        @media (max-width: $bp-md) {
+            margin-top: 30px;
+        }
+        @media (max-width: $bp-xs) {
+            min-width: 100%;
+        }
     }
 }
