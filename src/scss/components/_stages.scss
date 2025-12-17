@@ -8,12 +8,23 @@
     @media (max-width: $bp-sm) {
         margin-top: 50px;
     }
-
+    &__main-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        @media (max-width: $bp-md) {
+            align-items: flex-start;
+            gap: 30px;
+        }
+    }
     &__outer {
-        @media (max-width: $bp-sm) {
+        margin-top: 50px;
+        @media (max-width: $bp-md) {
             display: flex;
             flex-direction: column;
             gap: 15px;
+            margin-top: 30px;
         }
     }
 
@@ -26,10 +37,6 @@
         }
 
         @media (max-width: $bp-md) {
-            gap: 50px;
-        }
-
-        @media (max-width: $bp-sm) {
             flex-direction: column;
             gap: 15px;
         }
@@ -38,16 +45,43 @@
     &__wrapper-top {
         justify-content: space-between;
 
-        @media (max-width: $bp-sm) {
+        @media (max-width: $bp-md) {
             justify-content: flex-start;
+            .stages__card {
+                &:nth-child(1) {
+                order: 1;
+                }
+                &:nth-child(2) {
+                    order: 3;
+                }
+                &:nth-child(3) {
+                    display: none;
+                }
+                &:last-child {
+                    display: block;
+                    order: 2;
+                }
+            }
         }
     }
 
     &__wrapper-bottom {
         justify-content: center;
 
-        @media (max-width: $bp-sm) {
+        @media (max-width: $bp-md) {
             justify-content: flex-start;
+            .stages__card {
+                &:nth-child(1) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    order: 1;
+                }
+                &:nth-child(3) {
+                    display: block;
+                    order: 2;
+                }
+            }
         }
     }
 
@@ -56,9 +90,6 @@
 
         @media (max-width: $bp-md) {
             margin: 40px 0;
-        }
-
-        @media (max-width: $bp-sm) {
             display: none;
         }
 
@@ -72,16 +103,13 @@
 
     &__card {
         max-width: 310px;
-
+        &:last-child {
+            display: none;
+        }
         @media (max-width: $bp-lg) {
             max-width: 280px;
         }
-
         @media (max-width: $bp-md) {
-            max-width: 250px;
-        }
-
-        @media (max-width: $bp-sm) {
             max-width: 100%;
         }
 
@@ -94,9 +122,11 @@
             padding: 10px 15px;
             font-size: 14px;
 
-            @media (max-width: $bp-sm) {
-                padding: 12px 15px;
-                font-size: 15px;
+            @media (max-width: $bp-md) {
+                width: 50%;
+            }
+            @media (max-width: $bp-xs) {
+                width: 100%;
             }
         }
 
@@ -111,22 +141,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            @media (max-width: $bp-sm) {
-                width: 28px;
-                height: 28px;
-                font-size: 20px;
-            }
         }
 
         .icon {
             width: 17px;
             height: 17px;
-
-            @media (max-width: $bp-sm) {
-                width: 18px;
-                height: 18px;
-            }
         }
 
         &-info {
@@ -137,23 +156,10 @@
             font-size: 14px;
             font-weight: 300;
 
-            @media (max-width: $bp-sm) {
-                padding: 15px;
+            @media (max-width: $bp-md) {
+                padding: 20px 0;
                 gap: 12px;
             }
-        }
-    }
-
-    .button--solid-dark {
-        margin-top: 50px;
-
-        @media (max-width: $bp-md) {
-            margin-top: 40px;
-        }
-
-        @media (max-width: $bp-sm) {
-            margin-top: 30px;
-            width: 100%;
         }
     }
 }

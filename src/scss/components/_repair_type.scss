@@ -24,17 +24,29 @@
         border-radius: .5rem;
         position: relative;
 
-        @media (max-width: $bp-md) {
+        @media (max-width: 1399px) {
             height: 350px;
         }
 
-        @media (max-width: $bp-sm) {
+        @media (max-width: $bp-lg) {
             height: 320px;
+        }
+
+        @media (max-width: $bp-md) {
+            height: 270px;
+        }
+
+        @media (max-width: $bp-sm) {
+            height: 300px;
             grid-column: span 12 !important; // Одна карточка на всю ширину
         }
 
         @media (max-width: $bp-xs) {
-            height: 280px;
+            height: 230px;
+        }
+
+        @media (max-width: $bp-mobile-lg) {
+            height: 200px;
         }
 
         &-img {
@@ -59,15 +71,18 @@
             padding: 20px;
             border-radius: .5rem;
 
-            @media (max-width: $bp-sm) {
+            @media (max-width: $bp-md) {
                 right: 15px;
                 bottom: 15px;
                 padding: 15px;
-                left: 15px; // На мобильных растягиваем на всю ширину
             }
-
             @media (max-width: $bp-xs) {
                 padding: 12px;
+            }
+            @media (max-width: $bp-mobile-lg) {
+                right: 10px;
+                bottom: 10px;
+                padding: 10px;
             }
         }
 
@@ -76,16 +91,22 @@
             display: flex;
             gap: 20px;
             align-items: center;
+            .button--underline-light {
+                img {
+                    width: 6.5px;
+                }
+            }
 
-            @media (max-width: $bp-sm) {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
+            @media (max-width: $bp-md) {
                 margin-top: 15px;
+                gap: 15px;
+            }
+            @media (max-width: $bp-sm) {
+
             }
 
             @media (max-width: $bp-xs) {
-                gap: 10px;
+                gap: 15px;
                 margin-top: 12px;
             }
         }

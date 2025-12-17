@@ -144,8 +144,10 @@
         }
 
         &:hover {
-            background-color: $color-gold;
-            transform: translateY(-2px);
+            background-color: #BDC4C0;
+            svg path {
+                fill: $color-light-black;
+            }
         }
     }
 
@@ -153,11 +155,16 @@
     @media (max-width: $bp-lg) {
         &__inner {
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 50px 30px;
         }
-
+        &__left {
+            justify-content: start;
+        }
+        &__policies {
+            grid-column: -1 / 2;
+        }
         &__right {
-            grid-column: 1 / -1;
+            grid-column: -1 / 2;
         }
     }
 
@@ -165,13 +172,24 @@
         padding: 40px 0 30px;
         margin-top: 60px;
 
+        &__nav {
+            grid-column: 1;
+        }
+        &__policies {
+            grid-column: 1;
+        }
+        &__right {
+            grid-column: 1;
+        }
         &__inner {
             grid-template-columns: 1fr;
-            gap: 30px;
         }
 
         &__cta {
             width: 100%;
+        }
+        &__social {
+            justify-content: center;
         }
     }
 }

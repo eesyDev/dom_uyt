@@ -1,5 +1,7 @@
 .header {
     padding: 15px 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    backdrop-filter: blur(10px);
 
     &__inner {
         display: flex;
@@ -14,6 +16,11 @@
             gap: 30px;
             align-items: center;
             justify-content: center;
+            li {
+                &:hover {
+                    color: #bf9861;
+                }
+            }
         }
     }
 
@@ -21,6 +28,11 @@
         display: flex;
         align-items: center;
         gap: 20px;
+    }
+    &__phone {
+        &:hover {
+            color: #bf9861;
+        }
     }
 
     &.header--absolute {
@@ -35,6 +47,45 @@
     &__social {
         display: flex;
         gap: 10px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 34px;
+            height: 34px;
+            &:first-child {
+                border: 1px solid #78B2CC;
+                border-radius: 50%;
+                svg {
+                    transform: translate(0, 1px);
+
+                }
+                &:hover {
+                    background: #78B2CC;
+                    transition: fill 0.2s ease;
+                    svg path {
+                        fill: $color-btn-black;
+                    }
+                }
+            }
+            &:last-child {
+                border: 1px solid #8AD9AD;
+                border-radius: 50%;
+                svg {
+                    transform: translate(1px, 0);
+                }
+                &:hover {
+                    background: #8AD9AD;
+                    transition: fill 0.2s ease;
+                    svg path {
+                        fill: $color-btn-black;
+                    }
+                }
+            }
+            svg {
+                width: 16px;
+            }
+        }
     }
 
     // Responsive
@@ -74,8 +125,7 @@
         padding: 10px 0;
 
         .logo {
-            max-width: 120px;
-
+            width: 110px;
             img {
                 width: 100%;
             }
@@ -86,6 +136,10 @@
                 display: none;
             }
         }
+        .burger {
+            width: 22px;
+            height: 18px;
+        }
     }
 }
 
@@ -94,8 +148,8 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 22px;
+    width: 22px;
+    height: 17px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -115,15 +169,21 @@
     &.active {
         span:nth-child(1) {
             transform: translateY(10px) rotate(45deg);
+            background-color: #212121;
         }
 
         span:nth-child(2) {
             opacity: 0;
             transform: translateX(-20px);
+            background-color: #212121;
         }
 
         span:nth-child(3) {
-            transform: translateY(-10px) rotate(-45deg);
+            transform: translateY(-5px) rotate(-45deg);
+            background-color: #212121;
+            @media (max-width: $bp-sm) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
         }
     }
 
@@ -144,9 +204,11 @@
     z-index: 1000;
     transition: right 0.4s ease;
     overflow-y: auto;
+    display: none;
 
     &.active {
         right: 0;
+        display: block;
     }
 
     &__content {
@@ -189,7 +251,7 @@
     &__phone {
         font-size: 20px;
         font-weight: 600;
-        color: $color-bone;
+        color: $color-text-primary;
         text-decoration: none;
     }
 
@@ -226,5 +288,40 @@
     &.active {
         opacity: 1;
         visibility: visible;
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .header {
+        &__nav {
+            ul {
+                gap: 15px;
+            }
+        }
+        &__phone {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        &__nav {
+            ul {
+                gap: 15px;
+                font-size: 12px;
+            }
+        }
+        &__phone {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        &__actions {
+            gap: 25px;
+        }
     }
 }
