@@ -1,0 +1,136 @@
+.contacts-page {
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 0; /* гэп мы делаем колонкой */
+        @media (max-width: $bp-md) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .h1-accent {
+        grid-column: 1 / span 5;
+    }
+    &__left {
+        grid-column: 1 / span 5;
+        @media (max-width: $bp-md) {
+            margin-top: 30px;
+        }
+    }
+    &__subtitle {
+        color: $color-dark-green;
+    }
+    &__form {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #424242;
+            input {
+                height: 50px;
+                border-radius: 8px;
+                border: none;
+                background: #F0F0F0;
+                padding: 11px 20px;
+                &::placeholder {
+                    color: #A1A1A1;
+                }
+                &:hover, &:focus {
+                    background: #dfdfdf;
+                    &::placeholder {
+                        color: #727272;
+                    }
+                }
+            }
+        }
+        &-description {
+            font-size: 12px;
+            font-weight: 200;
+            margin-top: 10px;
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @media (max-width: $bp-lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @media (max-width: $bp-xs) {
+            align-items: center;
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    &__link {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: all .3s ease;
+        border: 0.3px solid #8F8F8F;
+        &:hover {
+            background-color: #8F8F8F;
+            svg path {
+                fill: #fff;
+            }
+        }
+        svg path {
+            fill: #8F8F8F;
+        }
+    }
+    &__right {
+        grid-column: 7 / span 6; /* 7 колонка — пустая */
+        grid-row: 1 / span 2;
+        background: #FAFAFA;
+        padding: 15px 15px 25px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        border-radius: 16px;
+        @media (max-width: $bp-md) {
+            margin-top: 30px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        a {
+            &:hover {
+                color: #8f8f8f;
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__map {
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+    }
+}

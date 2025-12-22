@@ -1,16 +1,8 @@
-.services-heading {
-    margin-top: 50px;
-
-    @media (max-width: $bp-sm) {
-        margin-top: 30px;
-    }
-}
-
 .services__inner {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-top: 54px;
+    margin-top: 50px;
 
     @media (max-width: $bp-sm) {
         margin-top: 30px;

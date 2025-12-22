@@ -3,37 +3,37 @@
     <div class="flex-popup">
         <div class="popup" id="call">
             <div class="popup__wrapper">
-                <div class="close">
-                    <svg class="ico">
-                        <use xlink:href="/assets/img/sprite.svg#ico-close"></use>
-                    </svg>
-                </div>
                 <div class="popup__content">
-                    <h5 class="h5">Обратный звонок</h5>
-                    <form method="POST" class="popup__form">
-                        <div class="input-group w-1_3">
-                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true"
-                                data-error="Please fill this field">
-                            <label for="name">Ваше имя *</label>
+                    <div class="title-wrap">
+                        <h2 class="h2-accent">Оставьте заявку</h2>
+                        <div class="close">
+                            <svg class="ico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6499 10.6495L5.70015 5.6998M5.70015 5.6998L0.750406 0.750051M5.70015 5.6998L10.6499 0.750009M5.70015 5.6998L0.750447 10.6495" stroke="#242424" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
                         </div>
-                        <div class="input-group w-1_3">
-                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true"
-                                data-error="Please fill this field">
-                            <label for="tel">Номер телефона *</label>
+                    </div>
+                    <form method="POST" class="popup__form contacts-page__form">
+                        <label>
+                            Ваше имя *
+                            <input type="text" id="name" name="name" data-required="true"
+                                data-error="Please fill this field" placeholder="Александр">
+                        </label>
+                        <label>
+                            Номер телефона *
+                            <input type="tel" id="tel" name="tel" data-required="true"
+                                data-error="Please fill this field" placeholder="+7 795 555 3535">
+                        </label>
+                        
+                        <div class="popup__btn-block">
+                            <button class="button button--solid-dark" type="submit">
+                                Оставить заявку
+                            </button>
+                            <div class="input-group w-full">
+                                <p class="form-description">Нажимая отправить, Вы даете согласие на обработку ваших данных и
+                                    соглашаетесь с нашей <a href="#policy" class="underlined">политикой
+                                        конфиденциальности</a></p>
+                            </div>
                         </div>
-                        <div class="input-group w-full">
-                            <input type="text" id="message" name="message" class="input input-large inpt-message"
-                                data-error="Please fill this field">
-                            <label for="message">Сообщение (опционально)</label>
-                        </div>
-                        <div class="input-group w-full">
-                            <p class="form-description">Нажимая отправить, Вы даете согласие на обработку ваших данных и
-                                соглашаетесь с нашей <a href="#policy" class="underlined">политикой
-                                    конфиденциальности</a></p>
-                        </div>
-                        <button class="button button--solid-dark" type="submit">
-                            Оставить заявку
-                        </button>
                         <input type="hidden" name="action" value="call">
                     </form>
                 </div>

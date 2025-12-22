@@ -5,6 +5,9 @@ h1,
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    @media (max-width: $bp-md) {
+        font-size: 42px;
+    }
 }
 
 .h1-accent {
@@ -14,18 +17,70 @@ h1,
     font-weight: 700;
     line-height: normal;
     position: relative;
-
+    color: #29390C;
+    @media (max-width: $bp-lg) {
+        font-size: 98px;
+    }
+    @media (max-width: $bp-md) {
+        font-size: 84px;
+    }
+    @media (max-width: $bp-xs) {
+        font-size: 64px;
+    }
+    @media (max-width: $bp-mobile-lg) {
+        font-size: 48px;
+    }
     &.accent-heading-before {
         &:before {
             content: '';
-            width: 550px;
+            width: 740px;
             height: 160px;
             position: absolute;
-            left: -130px;
-            top: 0;
+            left: -320px;
+            top: -5px;
             z-index: -1;
             background-image: url('../img/green-pattern.svg');
         }
+        @media (max-width: $bp-lg) {
+            &.accent-heading-before {
+                &:before {
+                    width: 680px;
+                    height: 140px;
+                }
+            }
+        }
+        @media (max-width: $bp-md) {
+            &.accent-heading-before {
+                &:before {
+                    width: 620px;
+                    height: 120px;
+                }
+            }
+        }
+        @media (max-width: $bp-xs) {
+            &.accent-heading-before {
+                &:before {
+                    width: 530px;
+                    height: 100px;
+                }
+            }
+        }
+        @media (max-width: $bp-mobile-lg) {
+            &.accent-heading-before {
+                &:before {
+                    width: 480px;
+                    height: 75px;
+                }
+            }
+        }
+    }
+}
+
+.h1-heading {
+    margin-top: 50px;
+
+    @media (max-width: $bp-sm) {
+        margin-top: 30px;
     }
 }
 
@@ -36,6 +91,9 @@ h2,
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width: $bp-md) {
+        font-size: 32px;
+    }
     @media (max-width: $bp-sm) {
         font-size: 24px;
     }
@@ -48,14 +106,18 @@ h2,
     font-weight: 700;
     line-height: normal;
     position: relative;
+    color: #29390C;
+    @media (max-width: $bp-sm) {
+        font-size: 32px;
+    }
     &.accent-before {
         &:before {
             content: '';
-            width: 350px;
+            width: 540px;
             height: 150px;
             position: absolute;
-            left: -130px;
-            top: 0;
+            left: -320px;
+            top: -30px;
             z-index: -1;
             background-image: url('../img/pattern.svg');
         }
@@ -69,6 +131,14 @@ h3,
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.h3-accent {
+    font-family: $font-family-secondary;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: normal;
+    color: $color-dark-green;
 }
 
 h4,

@@ -1,0 +1,92 @@
+.blog-page {
+    margin-top: 50px;
+    @media (max-width: $bp-xs) {
+        margin-top: 30px;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 50px 20px;
+        @media (max-width: $bp-mobile-md) {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+    }
+}
+
+.blog-post {
+    border-radius: 8px;
+    border: 0.2px solid #DEDEDE;
+    box-shadow: 2px 2px 4px #98989847;
+    &__img {
+        border-radius: 8px 8px 0 0;
+    }
+    &__info {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @media (max-width: $bp-sm) {
+            padding: 20px;
+        }
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 300;
+        color: #29390C;
+    }
+    &__text {
+        font-size: 14px;
+        font-weight: 200;
+    }
+    &__timing {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 200;
+        color: #8F8F8F;
+    }
+    .button.button--underline-light {
+        font-size: 14px;
+        font-weight: 500;
+        width: fit-content;
+        margin-top: 20px;
+        color: #29390C;
+        &::before {
+            background-color: #29390C;
+        }
+        svg path {
+            fill: #29390C;
+        }
+        &:hover {
+            color: #bf9861;
+            &::before {
+                background-color: #bf9861;
+            }
+            svg path {
+                fill: #bf9861;
+            }
+        }
+    }
+}
+
+.pagination {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    @media (max-width: $bp-sm) {
+        margin-top: 60px;
+    }
+    &__link {
+        font-size: 22px;
+        font-weight: 700;
+        color: #8F8F8F;
+        &:hover {
+            color: #424242;
+        }
+        &.active {
+            color: $color-light-black;
+        }
+    }
+}
