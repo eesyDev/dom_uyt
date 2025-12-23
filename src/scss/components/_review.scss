@@ -1,6 +1,12 @@
 .review {
-    margin-top: 80px;
+    margin-top: 100px;
 
+    @media (max-width: $bp-md) {
+        margin-top: 80px;
+    }
+    @media (max-width: $bp-sm) {
+        margin-top: 60px;
+    }
     &__title {
         margin-bottom: 50px;
     }
@@ -98,12 +104,8 @@
         }
     }
 
-    @media (max-width: $bp-md) {
-        
-    }
-
     @media (max-width: $bp-sm) {
-        padding: 60px 0;
+        // padding: 60px 0;
 
         &__grid {
             grid-template-columns: 1fr;
@@ -133,5 +135,15 @@
         &__media {
             flex: 0 0 180px;
         }
+    }
+}
+
+.reviews-page {
+    margin-top: 50px;
+    @media (max-width: $bp-sm) {
+        padding: 0;
+    }
+    @media (max-width: $bp-xs) {
+        margin-top: 30px;
     }
 }

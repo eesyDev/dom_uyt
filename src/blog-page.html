@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 //= utilities/head.html
 
-<body>
-    <header class="header header--dark">
+<body id="reviews-page">
+    <header class="header header--dark"> 
         <div class="container">
             <div class="header__inner">
                 <a href="/" class="logo">
@@ -42,6 +42,7 @@
                         </div>
                         <a href="#call" class="button button--solid open-popup">Рассчитать стоимость</a>
                     </div>
+
                     <!-- Burger Button -->
                     <button class="burger" aria-label="Открыть меню">
                         <span></span>
@@ -56,6 +57,7 @@
         <div class="mobile-menu">
             <div class="mobile-menu__content">
                 <nav class="mobile-menu__nav">
+                    <img src="assets/img/black-logo.svg" alt="logo" class="mobile-menu__logo">
                     <ul>
                         <li><a href="">Главная</a></li>
                         <li><a href="#">Услуги</a></li>
@@ -88,22 +90,32 @@
     <main>
         <section class="h1-heading">
             <div class="container">
-                <h1 class="h1-accent accent-heading-before">Услуги</h1>
+                <h1 class="h1-accent accent-heading-before">Блог</h1>
             </div>
         </section>
-        <section class="services">
+        <section class="blog-page section">
             <div class="container">
-                <div class="services__inner">
-                    //= sections/services-card.html
-                    //= sections/services-card-rtl.html
+                <div class="blog-page__wrap">
+                    //= sections/blog-post.html
+                    //= sections/blog-post.html
+                    //= sections/blog-post.html
+                    //= sections/blog-post.html
+                    //= sections/blog-post.html
+                    //= sections/blog-post.html
+                    //= sections/blog-post.html
+                </div>
+                <div class="pagination">
+                    <a href="#" class="pagination__link">1</a>
+                    <a href="#" class="pagination__link">2</a>
+                    <a href="#" class="pagination__link">3</a>
+                    <a href="#" class="pagination__link">4</a>
+                    <a href="#" class="pagination__link">5</a>
+                    <a href="#" class="pagination__link">→</a>
                 </div>
             </div>
-
         </section>
-        //= sections/cycle.html
     </main>
-    //= sections/estimate.html
-    //= sections/jk.html
+
     //= sections/footer.html
     //= sections/dialogs.html
 

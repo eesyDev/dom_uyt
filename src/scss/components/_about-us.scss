@@ -1,0 +1,33 @@
+.about-us-page {
+    margin-top: 50px;
+    @media (max-width: $bp-sm) {
+        margin-top: 30px;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 0; /* гэп мы делаем колонкой */
+        @media (max-width: $bp-md) {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+    }
+    &__item {
+        grid-column: 1 / span 6;
+        @media (max-width: $bp-md) {
+            grid-column: auto;
+        }
+        &:nth-child(2) {
+            grid-column: 8 / span 5; /* 7 колонка — пустая */
+            @media (max-width: $bp-md) {
+                grid-column: auto;
+            }
+        }
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 300;
+        color: $color-light-black;
+        margin-top: 20px;
+    }
+}

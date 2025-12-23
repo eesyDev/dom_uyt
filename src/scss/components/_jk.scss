@@ -29,7 +29,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 16px;
+                border-radius: 8px;
             }
         }
 
@@ -71,8 +71,6 @@
 
     // Responsive
     @media (max-width: $bp-lg) {
-        margin-top: 80px;
-
         &-slider {
             margin-top: 40px;
         }
@@ -87,7 +85,7 @@
     }
 
     @media (max-width: $bp-md) {
-        margin-top: 60px;
+        margin-top: 80px;
 
         &-slider {
             margin-top: 30px;
@@ -121,7 +119,7 @@
     }
 
     @media (max-width: $bp-sm) {
-        margin-top: 50px;
+        margin-top: 60px;
 
         &__heading {
             // flex-direction: column;
@@ -150,6 +148,17 @@
 
             &__spec-name {
                 font-size: 15px;
+            }
+        }
+    }
+
+    @media (max-width: $bp-xs) {
+        &-card {
+            padding: 10px;
+        }
+        &-slider {
+            &-btns {
+                display: none;
             }
         }
     }

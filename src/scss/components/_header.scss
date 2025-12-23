@@ -10,6 +10,12 @@
         color: $color-bone;
     }
 
+    .logo {
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
     &__nav {
         ul {
             display: flex;
@@ -22,6 +28,12 @@
                 }
             }
         }
+    }
+
+    &__right-wrap {
+        display: flex;
+        align-items: center;
+        gap: 25px;
     }
 
     &__actions {
@@ -87,7 +99,7 @@
                 }
             }
             svg {
-                width: 16px;
+                width: 14.5px;
             }
         }
     }
@@ -107,6 +119,8 @@
     }
 
     @media (max-width: $bp-md) {
+        position: relative;
+        z-index: 10;
         &__nav {
             display: none;
         }
@@ -216,7 +230,7 @@
     }
 
     &__content {
-        padding: 80px 30px 30px;
+        padding: 20px 30px 30px;
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -243,6 +257,11 @@
                 }
             }
         }
+    }
+
+    &__logo {
+        margin-bottom: 50px;
+        width: 150px;
     }
 
     &__contacts {

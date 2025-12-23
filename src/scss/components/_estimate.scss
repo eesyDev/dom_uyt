@@ -1,6 +1,12 @@
 .estimate {
     margin-top: 100px;
 
+    @media (max-width: $bp-md) {
+        margin-top: 80px;
+    }
+    @media (max-width: $bp-sm) {
+        margin-top: 60px;
+    }
     &__wrapper {
         position: relative;
         background-color: #1D1D1F; // Dark background

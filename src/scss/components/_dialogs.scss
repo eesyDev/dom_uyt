@@ -49,40 +49,32 @@
             transform: translate3d(0, 0, 0) scale(1);
         }
     }
-
+    .title-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .close {
-        position: absolute;
-        right: 24px;
-        top: 24px;
-
         display: flex;
         align-items: center;
         justify-content: center;
-
-        width: 24px;
-        height: 24px;
-
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
-        background: linear-gradient(90deg, rgba(46, 46, 46, 0.5) 0%, rgba(69, 69, 69, 0.5) 100%);
-        backdrop-filter: blur(16px);
-
+        border: 1px solid $color-light-black;
         cursor: pointer;
 
         .ico {
             display: flex;
             width: 10px;
             height: 10px;
-
-            use {
-                fill: #fff;
-                transition: all ease-in-out .2s;
-            }
         }
 
         &:hover {
-            .ico {
-                use {
-                    fill: #000;
+            border: 1px solid #a3a3a3;
+            svg {
+                path {
+                    stroke: #a3a3a3;
                 }
             }
         }
@@ -107,16 +99,24 @@
             padding: 0;
             box-sizing: border-box;
             overflow: visible;
+            @media (max-width: $bp-xs) {
+                width: 340px;
+            }
+            @media (max-width: $bp-mobile-sm) {
+                width: 300px;
+            }
         }
 
         &__content {
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 48px;
-
-            h5 {
-                text-align: center;
+            padding: 45px;
+            @media (max-width: $bp-xs) {
+                padding: 25px;
+            }
+            @media (max-width: $bp-mobile-sm) {
+                padding: 20px;
             }
         }
 
@@ -125,7 +125,7 @@
             flex-direction: column;
             width: 100%;
             margin-top: 32px;
-            gap: 24px;
+            gap: 30px;
 
             &.popup-list {
                 padding: 20px 0;
@@ -135,7 +135,10 @@
 
         .form-description {
             font-size: 12px;
-            font-weight: 400;
+            font-weight: 200;
+            a {
+                text-decoration: underline;
+            }
         }
 
         &__file {
@@ -156,6 +159,11 @@
             &:hover {
                 border-color: #000;
             }
+        }
+        &__btn-block {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
     }
 }

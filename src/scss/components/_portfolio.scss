@@ -346,3 +346,38 @@
         }
     }
 }
+
+.portfolio-page {
+    margin-top: 50px;
+    @media (max-width: $bp-xs) {
+        margin-top: 30px;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+.portfolio-page-case {
+    width: calc(50% - 10px);
+
+    &:nth-last-child(1), &:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+    @media (max-width: $bp-md) {
+        width: 100%;
+        &:nth-last-child(2) {
+            margin-bottom: 50px;
+        }
+    }
+    
+    &__info {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    &__btns-wrapper {
+        display: flex;
+        gap: 10px;
+    }
+    
+}

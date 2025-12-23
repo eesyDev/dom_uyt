@@ -1,5 +1,6 @@
 .why {
-    margin-top: 100px;
+    margin-top: 60px;
+    padding-top: 20px;
     position: relative;
     overflow: hidden;
 
@@ -118,8 +119,6 @@
 
     // Responsive
     @media (max-width: $bp-lg) {
-        margin-top: 80px;
-
         &__container {
             gap: 30px;
         }
@@ -130,7 +129,7 @@
     }
 
     @media (max-width: $bp-md) {
-        margin-top: 60px;
+        margin-top: 50px;
 
         &__container {
             flex-direction: column;
@@ -163,7 +162,7 @@
     }
 
     @media (max-width: $bp-sm) {
-        margin-top: 50px;
+        margin-top: 40px;
 
         &__title {
             margin-bottom: 20px;
